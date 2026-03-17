@@ -12,7 +12,6 @@ describe('Test image processing utility', () => {
         const width = 100;
         const height = 100;
         const outputPath = path_1.default.resolve(`./assets/thumbs/${filename}_${width}x${height}.jpg`);
-        // إذا كانت الصورة موجودة مسبقاً، نحذفها لنضمن أن الاختبار سيعيد معالجتها فعلياً
         if (fs_1.default.existsSync(outputPath)) {
             fs_1.default.unlinkSync(outputPath);
         }

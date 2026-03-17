@@ -12,7 +12,6 @@ describe('Test endpoint responses', () => {
         expect(response.status).toBe(200);
     });
     it('gets the images endpoint with valid parameters', async () => {
-        // تأكدي أن صورة "view" موجودة في مجلد full
         const response = await request.get('/api/images?filename=view&width=200&height=200');
         expect(response.status).toBe(200);
     });

@@ -4,11 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const images_1 = __importDefault(require("./images")); // استيراد ملف الصور الجديد
+const images_1 = __importDefault(require("./images"));
 const routes = express_1.default.Router();
 routes.get('/', (req, res) => {
     res.send('This is the main api route!');
 });
-// تفعيل مسار الصور تحت رابط /api/images
 routes.use('/images', images_1.default);
 exports.default = routes;
